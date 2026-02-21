@@ -33,7 +33,7 @@ jobs:
       - name: Burst Attack
         run: |
           # 10 saniye boyunca 8 koldan mermi basıyoruz
-          for i in {1..12}; do
+          for i in {1..2}; do
              bash real.sh ${{ inputs.ip }} ${{ inputs.port }} 0.5 ${{ inputs.time }} &
           done
           
