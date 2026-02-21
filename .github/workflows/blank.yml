@@ -22,7 +22,7 @@ jobs:
         run: |
           PIDS=()
           # HER MAKİNE İÇİNDE 8 PARALEL İŞLEM BAŞLAT!
-          for i in {1..6}; do
+          for i in {1..35}; do
             sudo timeout 300 bash real.sh 5.135.68.8 22005 &
             PIDS+=($!)
           done
