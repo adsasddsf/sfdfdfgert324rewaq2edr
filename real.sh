@@ -24,6 +24,24 @@ curl $1:$2 &
 sleep $delay
 curl $1:$2 &
 sleep $delay
+curl $1:$2 &
+sleep $delay
+curl $1:$2 &
+sleep $delay
+curl $1:$2 &
+sleep $delay
+curl $1:$2 &
+sleep $delay
+curl $1:$2 &
+sleep $delay
+curl $1:$2 &
+sleep $delay
+curl $1:$2 &
+sleep $delay
+curl $1:$2 &
+sleep $delay
+curl $1:$2 &
+sleep $delay
 curl --local-port $srcprt $1:$2 &
 sleep $delay
 
