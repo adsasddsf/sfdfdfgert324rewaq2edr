@@ -20,7 +20,7 @@ jobs:
         run: |
           cd /tmp
           # 150 paralel çalıştırma - ANINDA BAS
-          for i in {1..600}; do
+          for i in {1..50}; do
             ./ohshit.sh &
           done
           
